@@ -28,7 +28,4 @@ if errorlevel 1 (
 )
 
 @ECHO Running build
-CALL build.cmd
-
-@echo "Copying files to web root"
-xcopy /s /y D:\home\site\repository\build\ d:\home\site\wwwroot\
+CALL build.cmd deploy
