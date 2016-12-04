@@ -31,4 +31,4 @@ if errorlevel 1 (
 CALL build.cmd
 
 @echo "Copying files to web root"
-xcopy /s /y build\ d:\home\site\wwwroot\
+xcopy /s /y D:\home\site\repository\build\ d:\home\site\wwwroot\
