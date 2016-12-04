@@ -29,8 +29,7 @@ Target "Build" (fun _ ->
 
 Target "Deploy" (fun _ ->
     !! (buildDir + "/**/*.*")
-        -- "*.zip"
-        |> Zip buildDir (deployDir + "ApplicationName." + version + ".zip")
+        |> Copy ((environVarOrFail "USERPROFILE") @@ "site/wwwroot")
 )
 
 // Build order
