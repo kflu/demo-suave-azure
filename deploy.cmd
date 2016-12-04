@@ -28,7 +28,7 @@ if errorlevel 1 (
 )
 
 @ECHO Running build
-build.cmd
+CALL build.cmd
 
-@echo Copying files to web root
+@echo "Copying files to web root"
 xcopy /s /y build\ d:\home\site\wwwroot\
