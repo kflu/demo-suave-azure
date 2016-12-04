@@ -28,8 +28,7 @@ Target "Build" (fun _ ->
 )
 
 Target "Deploy" (fun _ ->
-    !! (buildDir + "/**/*.*")
-        |> Copy ((environVarOrFail "USERPROFILE") @@ "site/wwwroot")
+    !! (buildDir + "/**/*.*") |> Copy @"d:/home/site/wwwroot"
 )
 
 // Build order
